@@ -1237,6 +1237,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .custom-block {
   margin-bottom: 30px; }
   .custom-block .section-title {
+    color: gray;
     font-size: 18px;
     font-weight: 700; }
 

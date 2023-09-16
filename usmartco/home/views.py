@@ -26,5 +26,6 @@ def shop(request):
     #-#
     return render(request,'shop.html',{'productList':productList})
 
-def shopProduct(request):
-    return render(request,'elements.html')
+def viewProduct(request,pk):
+    product = models.product.objects.get(id = pk)
+    return render(request,'elements.html',{"product":product})
