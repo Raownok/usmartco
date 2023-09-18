@@ -11,6 +11,7 @@ from home import views
 
 urlpatterns = [
     path("product/<int:pk>/",views.viewProduct , name = 'viewProduct'),
+    path("result/",views.searchResult , name = 'searchResult'),
    
 ]
 if settings.DEBUG:

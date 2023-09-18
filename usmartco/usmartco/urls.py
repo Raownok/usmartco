@@ -30,6 +30,8 @@ urlpatterns = [
     path('',views.home,name = 'home'),
     path('shop/view/', views.shop, name = 'shop'),
     path('shop/', include('home.urls')),
+    path('search/', include('home.urls')),
+   
    
 ]
 if settings.DEBUG:
