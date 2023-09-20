@@ -17,7 +17,7 @@
     <div class="owl-carousel owl-single home-slider">
       <div class="item">
         <div class="untree_co-hero">
-          <a href="your_link_url_here">
+          <a href="/product/skinCare/">
             <img src="{% static 'images/products/skincare.jpg'%}" alt="Image" class="img-fluid">
           </a>
           <div class="container">
@@ -39,7 +39,7 @@
   
       <div class="item">
         <div class="untree_co-hero">
-          <a href="your_link_url_here">
+          <a href="/product/makeup/">
             <img src="{% static 'images/products/makeup.jpg'%}" alt="Image" class="img-fluid">
           </a>
           <div class="container">
@@ -60,7 +60,7 @@
 
       <div class="item">
         <div class="untree_co-hero">
-          <a href="your_link_url_here">
+          <a href="/product/hairCare/">
             <img src="{% static 'images/products/haircare.png'%}" alt="Image" class="img-fluid">
           </a>
           <div class="container">
@@ -81,7 +81,7 @@
 
       <div class="item">
         <div class="untree_co-hero">
-          <a href="your_link_url_here">
+          <a href="/product/perfume/">
             <img src="{% static 'images/products/perfume.jpg'%}" alt="Image" class="img-fluid">
           </a>
           <div class="container">
@@ -142,13 +142,15 @@
           <div class="col-md-9">
             <div class="row">
               {% for product in productList %}
+              
                 <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
                   <div id = "{{product.id}}" class="product-item">
                     <a href="/shop/product/{{product.id}}" class="product-img">
-
-                      <div class="label new top-right">
-                        <div class='content'>New</div>
-                      </div>
+                      {% if product.product_Condition == "new" %}
+                        <div class="label new top-right">
+                          <div class='content'>New</div>
+                        </div>
+                      {% endif %}
 
 
                       <img src="/media/{{product.product_Image1}}" alt="Image" class="img-fluid">
@@ -156,6 +158,9 @@
                     <h3 class="title"><a href="/shop/product/{{product.id}}">{{product.product_Name}}</a></h3>
                     <div class="price">
                       <span>£ {{product.product_Price}}</span>
+                    </div>
+                    <div class="price">
+                      <span>£ {{product.product_Type}}</span>
                     </div>
                   </div>
                 </div>

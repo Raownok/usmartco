@@ -11,7 +11,12 @@ from home import views
 
 urlpatterns = [
     path("product/<int:pk>/",views.viewProduct , name = 'viewProduct'),
+    path("<int:pk>/",views.viewFeaturedProduct , name = 'viewFeaturedProduct'),
     path("result/",views.searchResult , name = 'searchResult'),
+    path("skinCare/",views.skinCare , name = 'skinCare'),
+    path("hairCare/",views.hairCare , name = 'hairCare'),
+    path("makeup/",views.makeup , name = 'makeup'),
+    path("perfume/",views.perfume , name = 'perfume'),
    
 ]
 if settings.DEBUG:

@@ -7,8 +7,10 @@
     <div class="container">
       <div class="row align-items-end text-center">
         <div class="col-lg-7 mx-auto">
-          <h1>Product</h1>  
-          <p class="mb-4"><a href="/">Home</a> / <strong>Product</strong></p>        
+          <h1 style="color: deeppink;">{{product.product_Type}}</h1>
+
+
+          <!-- <p class="mb-4"><a href="/">Home</a> / <strong>{{product.product_Type}}</strong></p>         -->
         </div>
       </div>
     </div>
@@ -46,6 +48,16 @@
               </div>
             </div>
           </div> <!-- END .custom-block -->
+          <div class="custom-block" data-aos="fade-up">
+            <h2 class="section-title">Video</h2>
+
+            <a href="https://vimeo.com/342333493" data-fancybox class="video-wrap">
+              <span class="play-wrap"><span class="icon-play"></span></span>
+              <img src="images/hero_bg_6.jpg" alt="Image" class="img-fluid rounded">
+            </a>
+          </div> 
+
+          
           
           <div class="custom-block" data-aos="fade-up">
             <h2 class="section-title mb-3">Check Unordered List</h2>
@@ -66,9 +78,13 @@
             <h2 class="section-title">£ {{product.product_Price}}</h2>
             <button type="submit" class="btn btn-primary">Add to cart</button>
           </div>
+
+          
         </div> <!-- /.col-lg-6 -->
+        
       </div> <!-- /.row -->    
     </div> <!-- /.container -->  
+    
   </div> <!-- /.untree_co-section -->
 
   {% endblock %}
